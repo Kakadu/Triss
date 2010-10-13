@@ -1,0 +1,58 @@
+ast.cmo: 
+ast.cmx: 
+codegen.cmo: typeload.cmo typecore.cmo type.cmo genxml.cmo common.cmo ast.cmo 
+codegen.cmx: typeload.cmx typecore.cmx type.cmx genxml.cmx common.cmx ast.cmx 
+common.cmo: type.cmo lexer.cmo ast.cmo 
+common.cmx: type.cmx lexer.cmx ast.cmx 
+genas3.cmo: type.cmo common.cmo codegen.cmo ast.cmo 
+genas3.cmx: type.cmx common.cmx codegen.cmx ast.cmx 
+gencpp.cmo: type.cmo lexer.cmo common.cmo codegen.cmo ast.cmo 
+gencpp.cmx: type.cmx lexer.cmx common.cmx codegen.cmx ast.cmx 
+genjs.cmo: type.cmo lexer.cmo common.cmo codegen.cmo ast.cmo 
+genjs.cmx: type.cmx lexer.cmx common.cmx codegen.cmx ast.cmx 
+genneko.cmo: type.cmo lexer.cmo common.cmo codegen.cmo ast.cmo 
+genneko.cmx: type.cmx lexer.cmx common.cmx codegen.cmx ast.cmx 
+genphp.cmo: type.cmo lexer.cmo common.cmo codegen.cmo ast.cmo 
+genphp.cmx: type.cmx lexer.cmx common.cmx codegen.cmx ast.cmx 
+genswf.cmo: type.cmo genswf9.cmo genswf8.cmo common.cmo ast.cmo 
+genswf.cmx: type.cmx genswf9.cmx genswf8.cmx common.cmx ast.cmx 
+genswf8.cmo: type.cmo lexer.cmo common.cmo codegen.cmo ast.cmo 
+genswf8.cmx: type.cmx lexer.cmx common.cmx codegen.cmx ast.cmx 
+genswf9.cmo: type.cmo lexer.cmo genswf8.cmo common.cmo codegen.cmo ast.cmo 
+genswf9.cmx: type.cmx lexer.cmx genswf8.cmx common.cmx codegen.cmx ast.cmx 
+genxml.cmo: type.cmo lexer.cmo common.cmo ast.cmo 
+genxml.cmx: type.cmx lexer.cmx common.cmx ast.cmx 
+interp.cmo: type.cmo lexer.cmo genneko.cmo common.cmo ast.cmo 
+interp.cmx: type.cmx lexer.cmx genneko.cmx common.cmx ast.cmx 
+lexer.cmo: ast.cmo 
+lexer.cmx: ast.cmx 
+main.cmo: typer.cmo typeload.cmo typecore.cmo type.cmo parser.cmo \
+    optimizer.cmo lexer.cmo interp.cmo genxml.cmo genswf.cmo genphp.cmo \
+    genneko.cmo genjs.cmo gencpp.cmo genas3.cmo common.cmo codegen.cmo \
+    ast.cmo 
+main.cmx: typer.cmx typeload.cmx typecore.cmx type.cmx parser.cmx \
+    optimizer.cmx lexer.cmx interp.cmx genxml.cmx genswf.cmx genphp.cmx \
+    genneko.cmx genjs.cmx gencpp.cmx genas3.cmx common.cmx codegen.cmx \
+    ast.cmx 
+optimizer.cmo: typecore.cmo type.cmo parser.cmo common.cmo ast.cmo 
+optimizer.cmx: typecore.cmx type.cmx parser.cmx common.cmx ast.cmx 
+parser.cmo: lexer.cmo common.cmo ast.cmo 
+parser.cmx: lexer.cmx common.cmx ast.cmx 
+triss_int.cmo: 
+triss_int.cmx: 
+triss_main.cmo: typer.cmo typeload.cmo typecore.cmo type.cmo parser.cmo \
+    optimizer.cmo lexer.cmo interp.cmo genxml.cmo genswf.cmo genas3.cmo \
+    common.cmo codegen.cmo ast.cmo 
+triss_main.cmx: typer.cmx typeload.cmx typecore.cmx type.cmx parser.cmx \
+    optimizer.cmx lexer.cmx interp.cmx genxml.cmx genswf.cmx genas3.cmx \
+    common.cmx codegen.cmx ast.cmx 
+type.cmo: ast.cmo 
+type.cmx: ast.cmx 
+typecore.cmo: type.cmo common.cmo ast.cmo 
+typecore.cmx: type.cmx common.cmx ast.cmx 
+typeload.cmo: typecore.cmo type.cmo parser.cmo common.cmo ast.cmo 
+typeload.cmx: typecore.cmx type.cmx parser.cmx common.cmx ast.cmx 
+typer.cmo: typeload.cmo typecore.cmo type.cmo parser.cmo optimizer.cmo \
+    lexer.cmo interp.cmo genneko.cmo common.cmo codegen.cmo ast.cmo 
+typer.cmx: typeload.cmx typecore.cmx type.cmx parser.cmx optimizer.cmx \
+    lexer.cmx interp.cmx genneko.cmx common.cmx codegen.cmx ast.cmx 

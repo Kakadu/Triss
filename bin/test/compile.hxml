@@ -1,0 +1,5 @@
+-swf9 test.swf
+-main Test
+-D dump
+-cp ../../haxe/std
+-xml test.out.xml
