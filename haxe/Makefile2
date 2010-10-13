@@ -1,0 +1,2 @@
+all:
+	ocamlc -c -I ../ocaml -I ../ocaml/swflib -I ../ocaml/xml-light -I ../ocaml/extc -I ../neko/libs/include/ocaml -g -pp camlp4o ast.ml lexer.ml type.ml common.ml parser.ml typecore.ml genxml.ml typeload.ml codegen.ml optimizer.ml ../neko/libs/include/ocaml/nast.ml ../neko/libs/include/ocaml/binast.ml ../neko/libs/include/ocaml/nxml.ml genneko.ml genas3.ml genjs.ml genswf8.ml genswf9.ml genswf.ml genphp.ml gencpp.ml interp.ml typer.ml main.ml
