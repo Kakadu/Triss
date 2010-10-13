@@ -1,11 +1,5 @@
 creating IDE for Haxe language.
 based on original Haxe compiler (svn revision 3409)
 
-run `ocaml install.ml` to build haxe compiler.
-`cd haxe && make all` to build Triss
-`cd ../bin/Test && ./triss compile.hxml` to run test example
-
-Developement initiated on October 13, 2010.
-
 mailto:kakadu.hafanana@gmail.com
 

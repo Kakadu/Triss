@@ -1,7 +1,0 @@
-lexer.ml
-*.neko
-*.cmo
-*.cmx
-*.cmi
-*.o
-*.obj
