@@ -1,0 +1,3 @@
+#!/bin/bash
+HAXE_LIBRARY_PATH=./../../haxe/std
+../haxe-byte -v compile.hxml

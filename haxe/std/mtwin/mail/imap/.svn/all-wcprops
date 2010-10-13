@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2441/trunk/std/mtwin/mail/imap
+END
+Message.hx
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1667/trunk/std/mtwin/mail/imap/Message.hx
+END
+Mailbox.hx
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2103/trunk/std/mtwin/mail/imap/Mailbox.hx
+END
+Envelope.hx
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2121/trunk/std/mtwin/mail/imap/Envelope.hx
+END
+BodyStructure.hx
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2261/trunk/std/mtwin/mail/imap/BodyStructure.hx
+END
+Connection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2441/trunk/std/mtwin/mail/imap/Connection.hx
+END
+Tools.hx
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/1259/trunk/std/mtwin/mail/imap/Tools.hx
+END

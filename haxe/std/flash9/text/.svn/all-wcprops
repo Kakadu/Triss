@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2907/trunk/std/flash9/text
+END
+CSMSettings.hx
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2471/trunk/std/flash9/text/CSMSettings.hx
+END
+TextSnapshot.hx
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2471/trunk/std/flash9/text/TextSnapshot.hx
+END
+Font.hx
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2471/trunk/std/flash9/text/Font.hx
+END
+AntiAliasType.hx
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2471/trunk/std/flash9/text/AntiAliasType.hx
+END
+FontType.hx
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2471/trunk/std/flash9/text/FontType.hx
+END
+TextFormatAlign.hx
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2471/trunk/std/flash9/text/TextFormatAlign.hx
+END
+TextRun.hx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2471/trunk/std/flash9/text/TextRun.hx
+END
+TextRenderer.hx
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2471/trunk/std/flash9/text/TextRenderer.hx
+END
+TextExtent.hx
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2471/trunk/std/flash9/text/TextExtent.hx
+END
+TextFieldAutoSize.hx
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2471/trunk/std/flash9/text/TextFieldAutoSize.hx
+END
+TextDisplayMode.hx
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2471/trunk/std/flash9/text/TextDisplayMode.hx
+END
+TextLineMetrics.hx
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2471/trunk/std/flash9/text/TextLineMetrics.hx
+END
+TextFormatDisplay.hx
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2471/trunk/std/flash9/text/TextFormatDisplay.hx
+END
+TextColorType.hx
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2471/trunk/std/flash9/text/TextColorType.hx
+END
+FontStyle.hx
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2471/trunk/std/flash9/text/FontStyle.hx
+END
+TextField.hx
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2471/trunk/std/flash9/text/TextField.hx
+END
+StyleSheet.hx
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2471/trunk/std/flash9/text/StyleSheet.hx
+END
+GridFitType.hx
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2471/trunk/std/flash9/text/GridFitType.hx
+END
+TextFieldType.hx
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2471/trunk/std/flash9/text/TextFieldType.hx
+END
+StaticText.hx
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2471/trunk/std/flash9/text/StaticText.hx
+END
+TextFormat.hx
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2907/trunk/std/flash9/text/TextFormat.hx
+END

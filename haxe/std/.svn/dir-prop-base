@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 26
+*.n
+*.xml
+*.swf
+all.js
+mt
+
+END

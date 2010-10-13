@@ -1,0 +1,31 @@
+K 10
+svn:ignore
+V 277
+*.cmi
+*.cmo
+*.cmx
+*.obj
+Prompt Visual Studio 2008.lnk
+build-all-vs.ml
+build-all.ml
+build-nolib.ml
+build-php-vs.ml
+build-php.ml
+build-swf.ml
+clean.bat
+haxe
+haxe.exe
+haxe.ncb
+haxe.suo
+haxedoc.exe
+haxelib.exe
+haxeserver.bat
+haxesetup.exe
+lexer.ml
+lib
+neko
+ocaml
+test
+updatelib.ml
+
+END

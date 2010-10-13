@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/3253/trunk/std/php/net
+END
+SocketInput.hx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2676/trunk/std/php/net/SocketInput.hx
+END
+Socket.hx
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/3253/trunk/std/php/net/Socket.hx
+END
+SocketOutput.hx
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2676/trunk/std/php/net/SocketOutput.hx
+END
+Host.hx
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2506/trunk/std/php/net/Host.hx
+END

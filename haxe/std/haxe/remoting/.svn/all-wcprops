@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/3300/trunk/std/haxe/remoting
+END
+ExternalConnection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3222/trunk/std/haxe/remoting/ExternalConnection.hx
+END
+AsyncDebugConnection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2437/trunk/std/haxe/remoting/AsyncDebugConnection.hx
+END
+SyncSocketConnection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2507/trunk/std/haxe/remoting/SyncSocketConnection.hx
+END
+SocketConnection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2549/trunk/std/haxe/remoting/SocketConnection.hx
+END
+SocketProtocol.hx
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3300/trunk/std/haxe/remoting/SocketProtocol.hx
+END
+LocalConnection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2958/trunk/std/haxe/remoting/LocalConnection.hx
+END
+FlashJsConnection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2729/trunk/std/haxe/remoting/FlashJsConnection.hx
+END
+ContextAll.hx
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2506/trunk/std/haxe/remoting/ContextAll.hx
+END
+AsyncAdapter.hx
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2437/trunk/std/haxe/remoting/AsyncAdapter.hx
+END
+AsyncProxy.hx
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/776/trunk/std/haxe/remoting/AsyncProxy.hx
+END
+Proxy.hx
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/776/trunk/std/haxe/remoting/Proxy.hx
+END
+AMFConnection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2782/trunk/std/haxe/remoting/AMFConnection.hx
+END
+Context.hx
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2467/trunk/std/haxe/remoting/Context.hx
+END
+DelayedConnection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2437/trunk/std/haxe/remoting/DelayedConnection.hx
+END
+SocketWrapper.hx
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2476/trunk/std/haxe/remoting/SocketWrapper.hx
+END
+HttpAsyncConnection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2616/trunk/std/haxe/remoting/HttpAsyncConnection.hx
+END
+AsyncConnection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2426/trunk/std/haxe/remoting/AsyncConnection.hx
+END
+HttpConnection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3016/trunk/std/haxe/remoting/HttpConnection.hx
+END
+Connection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2426/trunk/std/haxe/remoting/Connection.hx
+END

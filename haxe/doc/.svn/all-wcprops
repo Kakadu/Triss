@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/svn/!svn/ver/3394/trunk/doc
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/171/trunk/doc/LICENSE.txt
+END
+haxeserver.bat
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/555/trunk/doc/haxeserver.bat
+END
+setup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/1865/trunk/doc/setup.cpp
+END
+setup.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/196/trunk/doc/setup.vcproj
+END
+CHANGES.txt
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/3394/trunk/doc/CHANGES.txt
+END
+release.neko
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/3126/trunk/doc/release.neko
+END
+setup.sln
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/196/trunk/doc/setup.sln
+END
+install.ml
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/3367/trunk/doc/install.ml
+END

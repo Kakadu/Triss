@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2943/trunk/std/flash9/geom
+END
+Orientation3D.hx
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2470/trunk/std/flash9/geom/Orientation3D.hx
+END
+Matrix.hx
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2471/trunk/std/flash9/geom/Matrix.hx
+END
+Rectangle.hx
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2471/trunk/std/flash9/geom/Rectangle.hx
+END
+PerspectiveProjection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2793/trunk/std/flash9/geom/PerspectiveProjection.hx
+END
+Utils3D.hx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2470/trunk/std/flash9/geom/Utils3D.hx
+END
+Point.hx
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2471/trunk/std/flash9/geom/Point.hx
+END
+Vector3D.hx
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2943/trunk/std/flash9/geom/Vector3D.hx
+END
+ColorTransform.hx
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2471/trunk/std/flash9/geom/ColorTransform.hx
+END
+Transform.hx
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2471/trunk/std/flash9/geom/Transform.hx
+END
+Matrix3D.hx
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2470/trunk/std/flash9/geom/Matrix3D.hx
+END

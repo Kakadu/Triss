@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/3376/trunk/std/cpp/io
+END
+Path.hx
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2856/trunk/std/cpp/io/Path.hx
+END
+Process.hx
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2861/trunk/std/cpp/io/Process.hx
+END
+FileInput.hx
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2856/trunk/std/cpp/io/FileInput.hx
+END
+File.hx
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/3376/trunk/std/cpp/io/File.hx
+END
+FileOutput.hx
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2856/trunk/std/cpp/io/FileOutput.hx
+END

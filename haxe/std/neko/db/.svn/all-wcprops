@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/3202/trunk/std/neko/db
+END
+Sqlite.hx
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/3049/trunk/std/neko/db/Sqlite.hx
+END
+Transaction.hx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2215/trunk/std/neko/db/Transaction.hx
+END
+Mysql.hx
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/3049/trunk/std/neko/db/Mysql.hx
+END
+Object.hx
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2423/trunk/std/neko/db/Object.hx
+END
+Manager.hx
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/3202/trunk/std/neko/db/Manager.hx
+END
+ResultSet.hx
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/851/trunk/std/neko/db/ResultSet.hx
+END
+Connection.hx
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/3049/trunk/std/neko/db/Connection.hx
+END

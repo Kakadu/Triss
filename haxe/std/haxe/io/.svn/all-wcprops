@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/2956/trunk/std/haxe/io
+END
+StringInput.hx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2443/trunk/std/haxe/io/StringInput.hx
+END
+BytesInput.hx
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2849/trunk/std/haxe/io/BytesInput.hx
+END
+Bytes.hx
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2956/trunk/std/haxe/io/Bytes.hx
+END
+BytesOutput.hx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2878/trunk/std/haxe/io/BytesOutput.hx
+END
+Error.hx
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2430/trunk/std/haxe/io/Error.hx
+END
+Eof.hx
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2428/trunk/std/haxe/io/Eof.hx
+END
+Input.hx
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2858/trunk/std/haxe/io/Input.hx
+END
+Output.hx
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2858/trunk/std/haxe/io/Output.hx
+END
+BytesData.hx
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2849/trunk/std/haxe/io/BytesData.hx
+END
+BytesBuffer.hx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2956/trunk/std/haxe/io/BytesBuffer.hx
+END

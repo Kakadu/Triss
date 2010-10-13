@@ -1,0 +1,14 @@
+K 10
+svn:ignore
+V 62
+*.n
+*.zip
+*.bat
+haxelib
+test
+files
+tmp
+haxelib.db
+haxelib.exe
+
+END

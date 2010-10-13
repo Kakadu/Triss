@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/3111/trunk/std/cpp/zip
+END
+Flush.hx
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2864/trunk/std/cpp/zip/Flush.hx
+END
+Compress.hx
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/3111/trunk/std/cpp/zip/Compress.hx
+END
+Uncompress.hx
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2969/trunk/std/cpp/zip/Uncompress.hx
+END

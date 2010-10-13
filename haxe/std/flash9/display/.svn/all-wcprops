@@ -1,0 +1,335 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/3381/trunk/std/flash9/display
+END
+GraphicsTrianglePath.hx
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2470/trunk/std/flash9/display/GraphicsTrianglePath.hx
+END
+GraphicsBitmapFill.hx
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2470/trunk/std/flash9/display/GraphicsBitmapFill.hx
+END
+InteractiveObject.hx
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2471/trunk/std/flash9/display/InteractiveObject.hx
+END
+MorphShape.hx
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2471/trunk/std/flash9/display/MorphShape.hx
+END
+Sprite.hx
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/3381/trunk/std/flash9/display/Sprite.hx
+END
+Loader.hx
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2962/trunk/std/flash9/display/Loader.hx
+END
+ShaderParameter.hx
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2470/trunk/std/flash9/display/ShaderParameter.hx
+END
+ActionScriptVersion.hx
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1251/trunk/std/flash9/display/ActionScriptVersion.hx
+END
+GraphicsPathCommand.hx
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2730/trunk/std/flash9/display/GraphicsPathCommand.hx
+END
+StageQuality.hx
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/1251/trunk/std/flash9/display/StageQuality.hx
+END
+StageAlign.hx
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1251/trunk/std/flash9/display/StageAlign.hx
+END
+SpreadMethod.hx
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/1251/trunk/std/flash9/display/SpreadMethod.hx
+END
+IGraphicsFill.hx
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2470/trunk/std/flash9/display/IGraphicsFill.hx
+END
+PixelSnapping.hx
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1251/trunk/std/flash9/display/PixelSnapping.hx
+END
+ShaderPrecision.hx
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2470/trunk/std/flash9/display/ShaderPrecision.hx
+END
+TriangleCulling.hx
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2470/trunk/std/flash9/display/TriangleCulling.hx
+END
+SimpleButton.hx
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2471/trunk/std/flash9/display/SimpleButton.hx
+END
+IGraphicsPath.hx
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2470/trunk/std/flash9/display/IGraphicsPath.hx
+END
+MovieClip.hx
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3009/trunk/std/flash9/display/MovieClip.hx
+END
+BlendMode.hx
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2470/trunk/std/flash9/display/BlendMode.hx
+END
+StageDisplayState.hx
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1934/trunk/std/flash9/display/StageDisplayState.hx
+END
+DisplayObject.hx
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3381/trunk/std/flash9/display/DisplayObject.hx
+END
+GraphicsPathWinding.hx
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2470/trunk/std/flash9/display/GraphicsPathWinding.hx
+END
+Scene.hx
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2471/trunk/std/flash9/display/Scene.hx
+END
+DisplayObjectContainer.hx
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2471/trunk/std/flash9/display/DisplayObjectContainer.hx
+END
+Shape.hx
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2471/trunk/std/flash9/display/Shape.hx
+END
+ShaderData.hx
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2750/trunk/std/flash9/display/ShaderData.hx
+END
+ShaderJob.hx
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2925/trunk/std/flash9/display/ShaderJob.hx
+END
+IGraphicsStroke.hx
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2470/trunk/std/flash9/display/IGraphicsStroke.hx
+END
+GraphicsSolidFill.hx
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2470/trunk/std/flash9/display/GraphicsSolidFill.hx
+END
+Stage.hx
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2470/trunk/std/flash9/display/Stage.hx
+END
+IGraphicsData.hx
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2470/trunk/std/flash9/display/IGraphicsData.hx
+END
+JointStyle.hx
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1251/trunk/std/flash9/display/JointStyle.hx
+END
+AVM1Movie.hx
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2471/trunk/std/flash9/display/AVM1Movie.hx
+END
+LineScaleMode.hx
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1251/trunk/std/flash9/display/LineScaleMode.hx
+END
+SWFVersion.hx
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1251/trunk/std/flash9/display/SWFVersion.hx
+END
+BitmapData.hx
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/3199/trunk/std/flash9/display/BitmapData.hx
+END
+Shader.hx
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2470/trunk/std/flash9/display/Shader.hx
+END
+CapsStyle.hx
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/1251/trunk/std/flash9/display/CapsStyle.hx
+END
+ShaderParameterType.hx
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2470/trunk/std/flash9/display/ShaderParameterType.hx
+END
+Bitmap.hx
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2471/trunk/std/flash9/display/Bitmap.hx
+END
+GraphicsPath.hx
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2470/trunk/std/flash9/display/GraphicsPath.hx
+END
+StageScaleMode.hx
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1251/trunk/std/flash9/display/StageScaleMode.hx
+END
+LoaderInfo.hx
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2471/trunk/std/flash9/display/LoaderInfo.hx
+END
+GraphicsGradientFill.hx
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2746/trunk/std/flash9/display/GraphicsGradientFill.hx
+END
+ShaderInput.hx
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2470/trunk/std/flash9/display/ShaderInput.hx
+END
+IBitmapDrawable.hx
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1251/trunk/std/flash9/display/IBitmapDrawable.hx
+END
+InterpolationMethod.hx
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1251/trunk/std/flash9/display/InterpolationMethod.hx
+END
+GraphicsStroke.hx
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2470/trunk/std/flash9/display/GraphicsStroke.hx
+END
+FrameLabel.hx
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2471/trunk/std/flash9/display/FrameLabel.hx
+END
+GraphicsEndFill.hx
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2470/trunk/std/flash9/display/GraphicsEndFill.hx
+END
+GraphicsShaderFill.hx
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2470/trunk/std/flash9/display/GraphicsShaderFill.hx
+END
+BitmapDataChannel.hx
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2730/trunk/std/flash9/display/BitmapDataChannel.hx
+END
+GradientType.hx
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/1251/trunk/std/flash9/display/GradientType.hx
+END
+Graphics.hx
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2470/trunk/std/flash9/display/Graphics.hx
+END
