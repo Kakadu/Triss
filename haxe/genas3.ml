@@ -260,7 +260,7 @@ let escape_bin s =
 	let b = Buffer.create 0 in
 	for i = 0 to String.length s - 1 do
 		match Char.code (String.unsafe_get s i) with
-		| c when c < 32 -> Buffer.add_string b (Printf.sprintf "\\x%.2X" c)
+                | c when c < 32 -> Buffer.add_string b (Printf.sprintf "\\x%.2X" c)
 		| c -> Buffer.add_char b (Char.chr c)
 	done;
 	Buffer.contents b

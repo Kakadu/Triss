@@ -1,5 +1,23 @@
 creating IDE for Haxe language.
-based on original Haxe compiler (svn revision 3409)
+based on original Haxe compiler (svn revision 3417)
 
 mailto:kakadu.hafanana@gmail.com
+
+
+TODO: understand defference between ExtLip.PMap and Core.Map. Both seems to be polymorphic, but PMap doesn't have Make functor.
+
+NB about viewing Common.context in ocamldebug.
+You should resolve dependencies. Paste ot ocamldebug cconsole such code:
+	load /usr/lib/ocaml/bigarray.cma              
+	load /usr/lib/ocaml/threads/threads.cma       
+	load /usr/local/lib/ocaml/3.11.2/bin_prot/bin_prot.cma
+	load /usr/lib/ocaml/res/res.cma                       
+	load /usr/lib/ocaml/fieldslib/fieldslib.cma 
+	load /usr/lib/ocaml/nums.cma
+	load /usr/local/lib/ocaml/3.11.2/sexplib/sexplib.cma
+	load /usr/local/lib/ocaml/3.11.2/core/core.cma
+	load /usr/lib/ocaml/pcre/pcre.cma
+	load /usr/local/lib/ocaml/3.11.2/core_extended/core_extended.cma
+	load /usr/local/lib/ocaml/3.11.2/deriving/deriving.cma
+
 

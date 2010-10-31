@@ -13,14 +13,16 @@ type error_msg =
 
 exception Error of error_msg * pos
 
-let error_msg = function
-	| Invalid_character c when int_of_char c > 32 && int_of_char c < 128 -> Printf.sprintf "Invalid character '%c'" c
-	| Invalid_character c -> Printf.sprintf "Invalid character 0x%.2X" (int_of_char c)
-	| Unterminated_string -> "Unterminated string"
-	| Unterminated_regexp -> "Unterminated regular expression"
-	| Unclosed_comment -> "Unclosed comment"
-	| Invalid_escape -> "Invalid escape sequence"
-	| Invalid_option -> "Invalid regular expression option"
+
+let error_msg msg = match msg with
+  | Invalid_character c when (((int_of_char c) > 32) && (int_of_char c < 128)) -> 
+    Printf.sprintf "Invalid character '%c'" c 
+  | Invalid_character c -> Printf.sprintf "Invalid character 0x%.2X" (int_of_char c)
+  | Unterminated_string -> "Unterminated string"
+  | Unterminated_regexp -> "Unterminated regular expression"
+  | Unclosed_comment -> "Unclosed comment"
+  | Invalid_escape -> "Invalid escape sequence"
+  | Invalid_option -> "Invalid regular expression option"
 
 let cur_file = ref ""
 let cur_line = ref 1
@@ -137,7 +139,7 @@ let find_line_index idx p =
 	loop idx.f_lines
 
 
-# 141 "lexer.ml"
+# 143 "lexer.ml"
 let __ocaml_lex_tables = {
   Lexing.lex_base = 
    "\000\000\253\255\000\000\000\000\000\000\255\255\001\000\006\000\
@@ -511,19 +513,19 @@ let rec skip_header lexbuf =
 and __ocaml_lex_skip_header_rec lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 163 "lexer.mll"
+# 165 "lexer.mll"
                   ( skip_header lexbuf )
-# 517 "lexer.ml"
+# 519 "lexer.ml"
 
   | 1 ->
-# 164 "lexer.mll"
+# 166 "lexer.mll"
                       ( skip_header lexbuf )
-# 522 "lexer.ml"
+# 524 "lexer.ml"
 
   | 2 ->
-# 165 "lexer.mll"
+# 167 "lexer.mll"
             ( )
-# 527 "lexer.ml"
+# 529 "lexer.ml"
 
   | __ocaml_lex_state -> lexbuf.Lexing.refill_buff lexbuf; __ocaml_lex_skip_header_rec lexbuf __ocaml_lex_state
 
@@ -532,303 +534,303 @@ and token lexbuf =
 and __ocaml_lex_token_rec lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 168 "lexer.mll"
+# 170 "lexer.mll"
        ( mk lexbuf Eof )
-# 538 "lexer.ml"
+# 540 "lexer.ml"
 
   | 1 ->
-# 169 "lexer.mll"
+# 171 "lexer.mll"
                ( token lexbuf )
-# 543 "lexer.ml"
+# 545 "lexer.ml"
 
   | 2 ->
-# 170 "lexer.mll"
+# 172 "lexer.mll"
           ( newline lexbuf; token lexbuf )
-# 548 "lexer.ml"
+# 550 "lexer.ml"
 
   | 3 ->
-# 171 "lexer.mll"
+# 173 "lexer.mll"
                ( newline lexbuf; token lexbuf )
-# 553 "lexer.ml"
+# 555 "lexer.ml"
 
   | 4 ->
-# 172 "lexer.mll"
+# 174 "lexer.mll"
                                    ( mk lexbuf (Const (Int (lexeme lexbuf))) )
-# 558 "lexer.ml"
+# 560 "lexer.ml"
 
   | 5 ->
-# 173 "lexer.mll"
+# 175 "lexer.mll"
               ( mk lexbuf (Const (Int (lexeme lexbuf))) )
-# 563 "lexer.ml"
+# 565 "lexer.ml"
 
   | 6 ->
-# 174 "lexer.mll"
+# 176 "lexer.mll"
                              ( mk lexbuf (Const (Float (lexeme lexbuf))) )
-# 568 "lexer.ml"
+# 570 "lexer.ml"
 
   | 7 ->
-# 175 "lexer.mll"
+# 177 "lexer.mll"
                   ( mk lexbuf (Const (Float (lexeme lexbuf))) )
-# 573 "lexer.ml"
+# 575 "lexer.ml"
 
   | 8 ->
-# 176 "lexer.mll"
+# 178 "lexer.mll"
                                               ( mk lexbuf (Const (Float (lexeme lexbuf))) )
-# 578 "lexer.ml"
+# 580 "lexer.ml"
 
   | 9 ->
-# 177 "lexer.mll"
+# 179 "lexer.mll"
                                                              ( mk lexbuf (Const (Float (lexeme lexbuf))) )
-# 583 "lexer.ml"
+# 585 "lexer.ml"
 
   | 10 ->
-# 178 "lexer.mll"
+# 180 "lexer.mll"
                     (
 			let s = lexeme lexbuf in
 			mk lexbuf (IntInterval (String.sub s 0 (String.length s - 3)))
 		)
-# 591 "lexer.ml"
+# 593 "lexer.ml"
 
   | 11 ->
-# 182 "lexer.mll"
+# 184 "lexer.mll"
                        (
 			let s = lexeme lexbuf in
 			mk lexbuf (CommentLine (String.sub s 2 ((String.length s)-2)))
 		)
-# 599 "lexer.ml"
+# 601 "lexer.ml"
 
   | 12 ->
-# 186 "lexer.mll"
+# 188 "lexer.mll"
         ( mk lexbuf (Unop Increment) )
-# 604 "lexer.ml"
+# 606 "lexer.ml"
 
   | 13 ->
-# 187 "lexer.mll"
+# 189 "lexer.mll"
         ( mk lexbuf (Unop Decrement) )
-# 609 "lexer.ml"
+# 611 "lexer.ml"
 
   | 14 ->
-# 188 "lexer.mll"
+# 190 "lexer.mll"
         ( mk lexbuf (Unop NegBits) )
-# 614 "lexer.ml"
+# 616 "lexer.ml"
 
   | 15 ->
-# 189 "lexer.mll"
+# 191 "lexer.mll"
         ( mk lexbuf (Binop (OpAssignOp OpMod)) )
-# 619 "lexer.ml"
+# 621 "lexer.ml"
 
   | 16 ->
-# 190 "lexer.mll"
+# 192 "lexer.mll"
         ( mk lexbuf (Binop (OpAssignOp OpAnd)) )
-# 624 "lexer.ml"
+# 626 "lexer.ml"
 
   | 17 ->
-# 191 "lexer.mll"
+# 193 "lexer.mll"
         ( mk lexbuf (Binop (OpAssignOp OpOr)) )
-# 629 "lexer.ml"
+# 631 "lexer.ml"
 
   | 18 ->
-# 192 "lexer.mll"
+# 194 "lexer.mll"
         ( mk lexbuf (Binop (OpAssignOp OpXor)) )
-# 634 "lexer.ml"
+# 636 "lexer.ml"
 
   | 19 ->
-# 193 "lexer.mll"
+# 195 "lexer.mll"
         ( mk lexbuf (Binop (OpAssignOp OpAdd)) )
-# 639 "lexer.ml"
+# 641 "lexer.ml"
 
   | 20 ->
-# 194 "lexer.mll"
+# 196 "lexer.mll"
         ( mk lexbuf (Binop (OpAssignOp OpSub)) )
-# 644 "lexer.ml"
+# 646 "lexer.ml"
 
   | 21 ->
-# 195 "lexer.mll"
+# 197 "lexer.mll"
         ( mk lexbuf (Binop (OpAssignOp OpMult)) )
-# 649 "lexer.ml"
+# 651 "lexer.ml"
 
   | 22 ->
-# 196 "lexer.mll"
+# 198 "lexer.mll"
         ( mk lexbuf (Binop (OpAssignOp OpDiv)) )
-# 654 "lexer.ml"
+# 656 "lexer.ml"
 
   | 23 ->
-# 197 "lexer.mll"
+# 199 "lexer.mll"
          ( mk lexbuf (Binop (OpAssignOp OpShl)) )
-# 659 "lexer.ml"
+# 661 "lexer.ml"
 
   | 24 ->
-# 200 "lexer.mll"
+# 202 "lexer.mll"
         ( mk lexbuf (Binop OpEq) )
-# 664 "lexer.ml"
+# 666 "lexer.ml"
 
   | 25 ->
-# 201 "lexer.mll"
+# 203 "lexer.mll"
         ( mk lexbuf (Binop OpNotEq) )
-# 669 "lexer.ml"
+# 671 "lexer.ml"
 
   | 26 ->
-# 202 "lexer.mll"
+# 204 "lexer.mll"
         ( mk lexbuf (Binop OpLte) )
-# 674 "lexer.ml"
+# 676 "lexer.ml"
 
   | 27 ->
-# 204 "lexer.mll"
+# 206 "lexer.mll"
         ( mk lexbuf (Binop OpBoolAnd) )
-# 679 "lexer.ml"
+# 681 "lexer.ml"
 
   | 28 ->
-# 205 "lexer.mll"
+# 207 "lexer.mll"
         ( mk lexbuf (Binop OpBoolOr) )
-# 684 "lexer.ml"
+# 686 "lexer.ml"
 
   | 29 ->
-# 206 "lexer.mll"
+# 208 "lexer.mll"
         ( mk lexbuf (Binop OpShl) )
-# 689 "lexer.ml"
+# 691 "lexer.ml"
 
   | 30 ->
-# 207 "lexer.mll"
+# 209 "lexer.mll"
         ( mk lexbuf Arrow )
-# 694 "lexer.ml"
+# 696 "lexer.ml"
 
   | 31 ->
-# 208 "lexer.mll"
+# 210 "lexer.mll"
          ( mk lexbuf (Binop OpInterval) )
-# 699 "lexer.ml"
+# 701 "lexer.ml"
 
   | 32 ->
-# 209 "lexer.mll"
+# 211 "lexer.mll"
        ( mk lexbuf (Unop Not) )
-# 704 "lexer.ml"
+# 706 "lexer.ml"
 
   | 33 ->
-# 210 "lexer.mll"
+# 212 "lexer.mll"
        ( mk lexbuf (Binop OpLt) )
-# 709 "lexer.ml"
+# 711 "lexer.ml"
 
   | 34 ->
-# 211 "lexer.mll"
+# 213 "lexer.mll"
        ( mk lexbuf (Binop OpGt) )
-# 714 "lexer.ml"
+# 716 "lexer.ml"
 
   | 35 ->
-# 212 "lexer.mll"
+# 214 "lexer.mll"
        ( mk lexbuf Semicolon )
-# 719 "lexer.ml"
+# 721 "lexer.ml"
 
   | 36 ->
-# 213 "lexer.mll"
+# 215 "lexer.mll"
        ( mk lexbuf DblDot )
-# 724 "lexer.ml"
+# 726 "lexer.ml"
 
   | 37 ->
-# 214 "lexer.mll"
+# 216 "lexer.mll"
        ( mk lexbuf Comma )
-# 729 "lexer.ml"
+# 731 "lexer.ml"
 
   | 38 ->
-# 215 "lexer.mll"
+# 217 "lexer.mll"
        ( mk lexbuf Dot )
-# 734 "lexer.ml"
+# 736 "lexer.ml"
 
   | 39 ->
-# 216 "lexer.mll"
+# 218 "lexer.mll"
        ( mk lexbuf (Binop OpMod) )
-# 739 "lexer.ml"
+# 741 "lexer.ml"
 
   | 40 ->
-# 217 "lexer.mll"
+# 219 "lexer.mll"
        ( mk lexbuf (Binop OpAnd) )
-# 744 "lexer.ml"
+# 746 "lexer.ml"
 
   | 41 ->
-# 218 "lexer.mll"
+# 220 "lexer.mll"
        ( mk lexbuf (Binop OpOr) )
-# 749 "lexer.ml"
+# 751 "lexer.ml"
 
   | 42 ->
-# 219 "lexer.mll"
+# 221 "lexer.mll"
        ( mk lexbuf (Binop OpXor) )
-# 754 "lexer.ml"
+# 756 "lexer.ml"
 
   | 43 ->
-# 220 "lexer.mll"
+# 222 "lexer.mll"
        ( mk lexbuf (Binop OpAdd) )
-# 759 "lexer.ml"
+# 761 "lexer.ml"
 
   | 44 ->
-# 221 "lexer.mll"
+# 223 "lexer.mll"
        ( mk lexbuf (Binop OpMult) )
-# 764 "lexer.ml"
+# 766 "lexer.ml"
 
   | 45 ->
-# 222 "lexer.mll"
+# 224 "lexer.mll"
        ( mk lexbuf (Binop OpDiv) )
-# 769 "lexer.ml"
+# 771 "lexer.ml"
 
   | 46 ->
-# 223 "lexer.mll"
+# 225 "lexer.mll"
        ( mk lexbuf (Binop OpSub) )
-# 774 "lexer.ml"
+# 776 "lexer.ml"
 
   | 47 ->
-# 224 "lexer.mll"
+# 226 "lexer.mll"
        ( mk lexbuf (Binop OpAssign) )
-# 779 "lexer.ml"
+# 781 "lexer.ml"
 
   | 48 ->
-# 225 "lexer.mll"
+# 227 "lexer.mll"
        ( mk lexbuf BkOpen )
-# 784 "lexer.ml"
+# 786 "lexer.ml"
 
   | 49 ->
-# 226 "lexer.mll"
+# 228 "lexer.mll"
        ( mk lexbuf BkClose )
-# 789 "lexer.ml"
+# 791 "lexer.ml"
 
   | 50 ->
-# 227 "lexer.mll"
+# 229 "lexer.mll"
        ( mk lexbuf BrOpen )
-# 794 "lexer.ml"
+# 796 "lexer.ml"
 
   | 51 ->
-# 228 "lexer.mll"
+# 230 "lexer.mll"
        ( mk lexbuf BrClose )
-# 799 "lexer.ml"
+# 801 "lexer.ml"
 
   | 52 ->
-# 229 "lexer.mll"
+# 231 "lexer.mll"
        ( mk lexbuf POpen )
-# 804 "lexer.ml"
+# 806 "lexer.ml"
 
   | 53 ->
-# 230 "lexer.mll"
+# 232 "lexer.mll"
        ( mk lexbuf PClose )
-# 809 "lexer.ml"
+# 811 "lexer.ml"
 
   | 54 ->
-# 231 "lexer.mll"
+# 233 "lexer.mll"
        ( mk lexbuf Question )
-# 814 "lexer.ml"
+# 816 "lexer.ml"
 
   | 55 ->
-# 232 "lexer.mll"
+# 234 "lexer.mll"
        ( mk lexbuf At )
-# 819 "lexer.ml"
+# 821 "lexer.ml"
 
   | 56 ->
-# 233 "lexer.mll"
+# 235 "lexer.mll"
         (
 			reset();
 			let pmin = lexeme_start lexbuf in
 			let pmax = (try comment lexbuf with Exit -> error Unclosed_comment pmin) in
 			mk_tok (Comment (contents())) pmin pmax;
 		)
-# 829 "lexer.ml"
+# 831 "lexer.ml"
 
   | 57 ->
-# 239 "lexer.mll"
+# 241 "lexer.mll"
        (
 			reset();
 			let pmin = lexeme_start lexbuf in
@@ -836,10 +838,10 @@ and __ocaml_lex_token_rec lexbuf __ocaml_lex_state =
 			let str = (try unescape (contents()) with Exit -> error Invalid_escape pmin) in
 			mk_tok (Const (String str)) pmin pmax;
 		)
-# 840 "lexer.ml"
+# 842 "lexer.ml"
 
   | 58 ->
-# 246 "lexer.mll"
+# 248 "lexer.mll"
        (
 			reset();
 			let pmin = lexeme_start lexbuf in
@@ -847,10 +849,10 @@ and __ocaml_lex_token_rec lexbuf __ocaml_lex_state =
 			let str = (try unescape (contents()) with Exit -> error Invalid_escape pmin) in
 			mk_tok (Const (String str)) pmin pmax;
 		)
-# 851 "lexer.ml"
+# 853 "lexer.ml"
 
   | 59 ->
-# 253 "lexer.mll"
+# 255 "lexer.mll"
         (
 			reset();
 			let pmin = lexeme_start lexbuf in
@@ -858,31 +860,31 @@ and __ocaml_lex_token_rec lexbuf __ocaml_lex_state =
 			let str = contents() in
 			mk_tok (Const (Regexp (str,options))) pmin pmax;
 		)
-# 862 "lexer.ml"
+# 864 "lexer.ml"
 
   | 60 ->
-# 260 "lexer.mll"
+# 262 "lexer.mll"
              (
 			let v = lexeme lexbuf in
 			let v = String.sub v 1 (String.length v - 1) in
 			mk lexbuf (Macro v)
 		)
-# 871 "lexer.ml"
+# 873 "lexer.ml"
 
   | 61 ->
-# 265 "lexer.mll"
+# 267 "lexer.mll"
          ( mk_ident lexbuf )
-# 876 "lexer.ml"
+# 878 "lexer.ml"
 
   | 62 ->
-# 266 "lexer.mll"
+# 268 "lexer.mll"
           ( mk lexbuf (Const (Type (lexeme lexbuf))) )
-# 881 "lexer.ml"
+# 883 "lexer.ml"
 
   | 63 ->
-# 267 "lexer.mll"
+# 269 "lexer.mll"
      ( invalid_char lexbuf )
-# 886 "lexer.ml"
+# 888 "lexer.ml"
 
   | __ocaml_lex_state -> lexbuf.Lexing.refill_buff lexbuf; __ocaml_lex_token_rec lexbuf __ocaml_lex_state
 
@@ -891,29 +893,29 @@ and comment lexbuf =
 and __ocaml_lex_comment_rec lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 270 "lexer.mll"
+# 272 "lexer.mll"
        ( raise Exit )
-# 897 "lexer.ml"
+# 899 "lexer.ml"
 
   | 1 ->
-# 271 "lexer.mll"
+# 273 "lexer.mll"
                         ( newline lexbuf; store lexbuf; comment lexbuf )
-# 902 "lexer.ml"
+# 904 "lexer.ml"
 
   | 2 ->
-# 272 "lexer.mll"
+# 274 "lexer.mll"
         ( lexeme_end lexbuf )
-# 907 "lexer.ml"
+# 909 "lexer.ml"
 
   | 3 ->
-# 273 "lexer.mll"
+# 275 "lexer.mll"
        ( store lexbuf; comment lexbuf )
-# 912 "lexer.ml"
+# 914 "lexer.ml"
 
   | 4 ->
-# 274 "lexer.mll"
+# 276 "lexer.mll"
                      ( store lexbuf; comment lexbuf )
-# 917 "lexer.ml"
+# 919 "lexer.ml"
 
   | __ocaml_lex_state -> lexbuf.Lexing.refill_buff lexbuf; __ocaml_lex_comment_rec lexbuf __ocaml_lex_state
 
@@ -922,39 +924,39 @@ and string lexbuf =
 and __ocaml_lex_string_rec lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 277 "lexer.mll"
+# 279 "lexer.mll"
        ( raise Exit )
-# 928 "lexer.ml"
+# 930 "lexer.ml"
 
   | 1 ->
-# 278 "lexer.mll"
+# 280 "lexer.mll"
                         ( newline lexbuf; store lexbuf; string lexbuf )
-# 933 "lexer.ml"
+# 935 "lexer.ml"
 
   | 2 ->
-# 279 "lexer.mll"
+# 281 "lexer.mll"
           ( store lexbuf; string lexbuf )
-# 938 "lexer.ml"
+# 940 "lexer.ml"
 
   | 3 ->
-# 280 "lexer.mll"
+# 282 "lexer.mll"
           ( store lexbuf; string lexbuf )
-# 943 "lexer.ml"
+# 945 "lexer.ml"
 
   | 4 ->
-# 281 "lexer.mll"
+# 283 "lexer.mll"
         ( store lexbuf; string lexbuf )
-# 948 "lexer.ml"
+# 950 "lexer.ml"
 
   | 5 ->
-# 282 "lexer.mll"
+# 284 "lexer.mll"
        ( lexeme_end lexbuf )
-# 953 "lexer.ml"
+# 955 "lexer.ml"
 
   | 6 ->
-# 283 "lexer.mll"
+# 285 "lexer.mll"
                           ( store lexbuf; string lexbuf )
-# 958 "lexer.ml"
+# 960 "lexer.ml"
 
   | __ocaml_lex_state -> lexbuf.Lexing.refill_buff lexbuf; __ocaml_lex_string_rec lexbuf __ocaml_lex_state
 
@@ -963,39 +965,39 @@ and string2 lexbuf =
 and __ocaml_lex_string2_rec lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 286 "lexer.mll"
+# 288 "lexer.mll"
        ( raise Exit )
-# 969 "lexer.ml"
+# 971 "lexer.ml"
 
   | 1 ->
-# 287 "lexer.mll"
+# 289 "lexer.mll"
                         ( newline lexbuf; store lexbuf; string2 lexbuf )
-# 974 "lexer.ml"
+# 976 "lexer.ml"
 
   | 2 ->
-# 288 "lexer.mll"
+# 290 "lexer.mll"
         ( store lexbuf; string2 lexbuf )
-# 979 "lexer.ml"
+# 981 "lexer.ml"
 
   | 3 ->
-# 289 "lexer.mll"
+# 291 "lexer.mll"
           ( store lexbuf; string2 lexbuf )
-# 984 "lexer.ml"
+# 986 "lexer.ml"
 
   | 4 ->
-# 290 "lexer.mll"
+# 292 "lexer.mll"
          ( store lexbuf; string2 lexbuf )
-# 989 "lexer.ml"
+# 991 "lexer.ml"
 
   | 5 ->
-# 291 "lexer.mll"
+# 293 "lexer.mll"
        ( lexeme_end lexbuf )
-# 994 "lexer.ml"
+# 996 "lexer.ml"
 
   | 6 ->
-# 292 "lexer.mll"
+# 294 "lexer.mll"
                            ( store lexbuf; string2 lexbuf )
-# 999 "lexer.ml"
+# 1001 "lexer.ml"
 
   | __ocaml_lex_state -> lexbuf.Lexing.refill_buff lexbuf; __ocaml_lex_string2_rec lexbuf __ocaml_lex_state
 
@@ -1004,34 +1006,34 @@ and regexp lexbuf =
 and __ocaml_lex_regexp_rec lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 295 "lexer.mll"
+# 297 "lexer.mll"
        ( raise Exit )
-# 1010 "lexer.ml"
+# 1012 "lexer.ml"
 
   | 1 ->
-# 296 "lexer.mll"
+# 298 "lexer.mll"
                         ( newline lexbuf; store lexbuf; regexp lexbuf )
-# 1015 "lexer.ml"
+# 1017 "lexer.ml"
 
   | 2 ->
-# 297 "lexer.mll"
+# 299 "lexer.mll"
          ( add "/"; regexp lexbuf )
-# 1020 "lexer.ml"
+# 1022 "lexer.ml"
 
   | 3 ->
-# 298 "lexer.mll"
+# 300 "lexer.mll"
                  ( store lexbuf; regexp lexbuf )
-# 1025 "lexer.ml"
+# 1027 "lexer.ml"
 
   | 4 ->
-# 299 "lexer.mll"
+# 301 "lexer.mll"
        ( regexp_options lexbuf, lexeme_end lexbuf )
-# 1030 "lexer.ml"
+# 1032 "lexer.ml"
 
   | 5 ->
-# 300 "lexer.mll"
+# 302 "lexer.mll"
                            ( store lexbuf; regexp lexbuf )
-# 1035 "lexer.ml"
+# 1037 "lexer.ml"
 
   | __ocaml_lex_state -> lexbuf.Lexing.refill_buff lexbuf; __ocaml_lex_regexp_rec lexbuf __ocaml_lex_state
 
@@ -1040,22 +1042,22 @@ and regexp_options lexbuf =
 and __ocaml_lex_regexp_options_rec lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 303 "lexer.mll"
+# 305 "lexer.mll"
                                (
 			let l = lexeme lexbuf in
 			l ^ regexp_options lexbuf
 		)
-# 1049 "lexer.ml"
+# 1051 "lexer.ml"
 
   | 1 ->
-# 307 "lexer.mll"
+# 309 "lexer.mll"
                ( error Invalid_option (lexeme_start lexbuf) )
-# 1054 "lexer.ml"
+# 1056 "lexer.ml"
 
   | 2 ->
-# 308 "lexer.mll"
+# 310 "lexer.mll"
       ( "" )
-# 1059 "lexer.ml"
+# 1061 "lexer.ml"
 
   | __ocaml_lex_state -> lexbuf.Lexing.refill_buff lexbuf; __ocaml_lex_regexp_options_rec lexbuf __ocaml_lex_state
 

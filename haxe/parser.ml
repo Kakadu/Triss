@@ -1,3 +1,4 @@
+
 (*
  *  Haxe Compiler
  *  Copyright (c)2005 Nicolas Cannasse
@@ -101,7 +102,7 @@ let rec make_unop op ((v,p2) as e) p1 =
 	match v with
 	| EBinop (bop,e,e2) -> EBinop (bop, make_unop op e p1 , e2) , (punion p1 p2)
 	| _ ->
-		EUnop (op,Prefix,e), punion p1 p2
+		EUnop (op,Prefix,e), (punion p1 p2)
 
 let popt f = parser
 	| [< v = f >] -> Some v

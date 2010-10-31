@@ -1,5 +1,5 @@
 -swf9 test.swf
 -main Test
 -D dump
--cp ../../haxe/std
+-cp ./std
 -xml test.out.xml

@@ -250,7 +250,7 @@ try
 			| l ->
 				l
 		in
-		let parts = "../../haxe/std" :: "std" :: Str.split_delim (Str.regexp "[;:]") p in
+		let parts = "" :: Str.split_delim (Str.regexp "[;:]") p in
 		com.class_path <- List.map normalize_path (loop parts)
 	with
 		Not_found ->
@@ -545,11 +545,6 @@ try
 		let filters = (if not com.foptimize then filters else Optimizer.reduce_expression ctx :: filters) in
 		Codegen.post_process com filters tfilters;
 		if Common.defined com "dump" then Codegen.dump_types com;
-	  (*
-		let out_ch = open_out "ctx" in
-		Marshal.to_channel ctx;
-		close_out out_ch;
-	  *)
 		(match com.platform with
 		| Cross ->
 			if !interp then begin

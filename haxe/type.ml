@@ -17,8 +17,8 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *)
 open Ast
-
-type path = string list * string
+module PMap = Der_pmap.PMap
+type path = string list * string deriving (Show)
 
 type field_kind =
 	| Var of var_kind
@@ -34,15 +34,25 @@ and var_access =
 	| AccNo				(* can't be accessed outside of the class itself and its subclasses *)
 	| AccNever			(* can't be accessed, even in subclasses *)
 	| AccResolve		(* call resolve("field") when accessed *)
-	| AccCall of string (* perform a method call when accessed *)
+	| AccCall of string            (* perform a method call when accessed *)
 	| AccInline			(* similar to Normal but inline when accessed *)
 
 and method_kind =
 	| MethNormal
 	| MethInline
 	| MethDynamic
-	| MethMacro
+	| MethMacro deriving (Show)
 
+type tconstant =
+	| TInt of int32
+	| TFloat of string
+	| TString of string
+	| TBool of bool
+	| TNull
+	| TThis
+	| TSuper deriving (Show)
+
+(* **************************************** *)
 type t =
 	| TMono of t option ref
 	| TEnum of tenum * tparams
@@ -51,18 +61,9 @@ type t =
 	| TFun of (string * bool * t) list * t
 	| TAnon of tanon
 	| TDynamic of t
-	| TLazy of (unit -> t) ref
+	| TLazy of (unit -> t) ref 
 
 and tparams = t list
-
-and tconstant =
-	| TInt of int32
-	| TFloat of string
-	| TString of string
-	| TBool of bool
-	| TNull
-	| TThis
-	| TSuper
 
 and tfunc = {
 	tf_args : (string * tconstant option * t) list;
@@ -161,7 +162,6 @@ and tclass = {
 	mutable cl_init : texpr option;
 	mutable cl_overrides : string list;
 }
-
 and tenum_field = {
 	ef_name : string;
 	ef_type : t;
@@ -196,12 +196,12 @@ and tdef = {
 and module_type =
 	| TClassDecl of tclass
 	| TEnumDecl of tenum
-	| TTypeDecl of tdef
+	| TTypeDecl of tdef  deriving (Show)
 
 type module_def = {
 	mpath : path;
 	mtypes : module_type list;
-}
+} deriving (Show)
 
 let mk e t p = { eexpr = e; etype = t; epos = p }
 

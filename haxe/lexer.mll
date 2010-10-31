@@ -31,14 +31,16 @@ type error_msg =
 
 exception Error of error_msg * pos
 
-let error_msg = function
-	| Invalid_character c when int_of_char c > 32 && int_of_char c < 128 -> Printf.sprintf "Invalid character '%c'" c
-	| Invalid_character c -> Printf.sprintf "Invalid character 0x%.2X" (int_of_char c)
-	| Unterminated_string -> "Unterminated string"
-	| Unterminated_regexp -> "Unterminated regular expression"
-	| Unclosed_comment -> "Unclosed comment"
-	| Invalid_escape -> "Invalid escape sequence"
-	| Invalid_option -> "Invalid regular expression option"
+
+let error_msg msg = match msg with
+  | Invalid_character c when (((int_of_char c) > 32) && (int_of_char c < 128)) -> 
+    Printf.sprintf "Invalid character '%c'" c 
+  | Invalid_character c -> Printf.sprintf "Invalid character 0x%.2X" (int_of_char c)
+  | Unterminated_string -> "Unterminated string"
+  | Unterminated_regexp -> "Unterminated regular expression"
+  | Unclosed_comment -> "Unclosed comment"
+  | Invalid_escape -> "Invalid escape sequence"
+  | Invalid_option -> "Invalid regular expression option"
 
 let cur_file = ref ""
 let cur_line = ref 1

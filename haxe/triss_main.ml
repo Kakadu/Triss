@@ -146,7 +146,8 @@ let rec read_type_path com p =
 				end;
 			end else if file_extension f = "hx" then begin
 				let c = Filename.chop_extension f in
-				if String.length c < 2 || String.sub c (String.length c - 2) 2 <> "__" then classes := c :: !classes;
+				if ((String.length c) < 2) || (String.sub c
+                                (String.length c - 2) 2 <> "__") then classes := c :: !classes;
 			end;
 		) r;
 	) com.class_path;
@@ -250,7 +251,7 @@ try
 			| l ->
 				l
 		in
-		let parts = "../../haxe/std" :: "std" :: Str.split_delim (Str.regexp "[;:]") p in
+		let parts = "../../haxe/std" :: "./std" :: "std" :: Str.split_delim (Str.regexp "[;:]") p in
 		com.class_path <- List.map normalize_path (loop parts)
 	with
 		Not_found ->
@@ -277,7 +278,8 @@ try
 		("-swf",Arg.String (set_platform Flash),"<file> : compile code to Flash SWF file");
 		("-swf9",Arg.String (fun file ->
 			set_platform Flash file;
-			if com.flash_version < 9 then com.flash_version <- 9;
+			match com.flash_version with
+			  | x when (x<9) ->  com.flash_version <- 9 | _ -> ();
 		),"<file> : compile code to Flash9 SWF file");
 		("-as3",Arg.String (fun dir ->
 			set_platform Flash dir;
@@ -528,6 +530,7 @@ try
 		List.iter (fun cpath -> ignore(ctx.Typecore.g.Typecore.do_load_module ctx cpath Ast.null_pos)) (List.rev !classes);
 		Typer.finalize ctx;
 		t();
+                print_endline "typing finished";
 (*		print_endline "Marshalling..";
 		let out_ch = open_out "data.tri" in
 		Marshal.to_channel out_ch ctx [Marshal.No_sharing];
@@ -549,8 +552,10 @@ try
 		let filters = (if not com.foptimize then filters else Optimizer.reduce_expression ctx :: filters) in
 		Codegen.post_process com filters tfilters;
 		if Common.defined com "dump" then Codegen.dump_types com;
-		print_endline "skipping codegeneration.";
-		Triss_int.interactive ctx;
+
+                print_endline "skipping codegeneration.";
+
+                Triss_int.interactive com;
 		(match !xml_out with
 		| None -> ()
 		| Some file ->

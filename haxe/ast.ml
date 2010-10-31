@@ -16,12 +16,14 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *)
+open Core
+open Core_extended 
 
 type pos = {
 	pfile : string;
 	pmin : int;
 	pmax : int;
-}
+} deriving (Show)
 
 type keyword =
 	| Function
@@ -61,7 +63,7 @@ type keyword =
 	| Package
 	| Callback
 	| Inline
-	| Using
+	| Using deriving (Show)
 
 type binop =
 	| OpAdd
@@ -85,14 +87,14 @@ type binop =
 	| OpUShr
 	| OpMod
 	| OpAssignOp of binop
-	| OpInterval
+	| OpInterval deriving (Show)
 
 type unop =
 	| Increment
 	| Decrement
 	| Not
 	| Neg
-	| NegBits
+	| NegBits  deriving (Show)
 
 type constant =
 	| Int of string
@@ -100,7 +102,7 @@ type constant =
 	| String of string
 	| Ident of string
 	| Type of string
-	| Regexp of string * string
+	| Regexp of string * string deriving (Show)
 
 type token =
 	| Eof
@@ -124,22 +126,22 @@ type token =
 	| IntInterval of string
 	| Macro of string
 	| Question
-	| At
+	| At deriving (Show)
 
 type unop_flag =
 	| Prefix
-	| Postfix
+	| Postfix deriving (Show)
 
 type while_flag =
 	| NormalWhile
-	| DoWhile
+	| DoWhile deriving (Show)
 
 type type_path = {
 	tpackage : string list;
 	tname : string;
 	tparams : type_param_or_const list;
 	tsub : string option;
-}
+} 
 
 and type_param_or_const =
 	| TPType of complex_type
@@ -156,6 +158,7 @@ and complex_type =
 	| CTAnonymous of (string * bool option * anonymous_field * pos) list
 	| CTParent of complex_type
 	| CTExtend of type_path * (string * bool option * anonymous_field * pos) list
+	    deriving (Show)
 
 type func = {
 	f_args : (string * bool * complex_type option * expr option) list;
@@ -193,13 +196,13 @@ and expr_def =
 	| EDisplayNew of type_path
 	| ETernary of expr * expr * expr
 
-and expr = expr_def * pos
+and expr = expr_def * pos deriving (Show)
 
-type type_param = string * type_path list
+type type_param = string * type_path list  deriving (Show)
 
-type documentation = string option
+type documentation = string option  deriving (Show)
 
-type metadata = (string * expr list) list
+type metadata = (string * expr list) list  deriving (Show)
 
 type access =
 	| APublic
@@ -207,25 +210,27 @@ type access =
 	| AStatic
 	| AOverride
 	| ADynamic
-	| AInline
+	| AInline  deriving (Show)
 
 type class_field =
 	| FVar of string * documentation * metadata * access list * complex_type option * expr option
 	| FFun of string * documentation * metadata * access list * type_param list * func
 	| FProp of string * documentation * metadata * access list * string * string * complex_type
+	    deriving (Show)
 
 type enum_flag =
 	| EPrivate
-	| EExtern
+	| EExtern  deriving (Show)
 
 type class_flag =
 	| HInterface
 	| HExtern
 	| HPrivate
 	| HExtends of type_path
-	| HImplements of type_path
+	| HImplements of type_path  deriving (Show)
 
-type enum_constructor = string * documentation * metadata * (string * bool * complex_type) list * pos
+type enum_constructor = string * documentation * metadata * (string * bool * complex_type) list * pos 
+     deriving (Show)
 
 type ('a,'b) definition = {
 	d_name : string;
@@ -235,10 +240,12 @@ type ('a,'b) definition = {
 	d_flags : 'a list;
 	d_data : 'b;
 }
+type class_def = (class_flag, (class_field * pos) list) definition 
+type enum_def  = (enum_flag, enum_constructor list) definition
 
 type type_def =
-	| EClass of (class_flag, (class_field * pos) list) definition
-	| EEnum of (enum_flag, enum_constructor list) definition
+	| EClass of class_def
+	| EEnum of enum_def
 	| ETypedef of (enum_flag, complex_type) definition
 	| EImport of type_path
 	| EUsing of type_path
@@ -270,8 +277,8 @@ let punion p p2 =
 
 let s_type_path (p,s) = match p with [] -> s | _ -> String.concat "." p ^ "." ^ s
 
-let parse_path s = 
-	match List.rev (ExtString.String.nsplit s ".") with
+let parse_path s = (* There is a change against extlib  *)
+	match List.rev (Core_string.split_on_chars s ~on:['.'] ) with
 	| [] -> failwith "Invalid empty path"
 	| x :: l -> List.rev l, x
 
