@@ -1,0 +1,172 @@
+class Test { 
+ static function main2() {}
+ static function main() { main2(); } 
+}
+---------------------------------------------------------------------------------
+cldecl : Type.module_type =
+  TClassDecl
+   {cl_path = ([], "Test");
+    cl_pos = {Ast.pfile = "Test.hx"; Ast.pmin = 0; Ast.pmax = 81};
+    cl_private = false; cl_doc = None; cl_meta = <fun>; cl_kind = KNormal;
+    cl_extern = false; cl_interface = false; cl_types = []; cl_super = None;
+    cl_implements = []; cl_fields = <abstr>; cl_statics = <abstr>;
+    cl_ordered_statics =
+     [{cf_name = "main2"; cf_type = TLazy {contents = <fun>};
+       cf_public = false; cf_doc = None; cf_meta = <fun>;
+       cf_kind = Method MethNormal; cf_params = [];
+       cf_expr =
+        Some
+         {eexpr =
+           TFunction
+            {tf_args = [];
+             tf_type =
+              TMono
+               {contents =
+                 Some
+                  (TEnum
+                    ({e_path = ([], "Void");
+                      e_pos =
+                       {Ast.pfile = "./std/StdTypes.hx"; Ast.pmin = 1486;
+                        Ast.pmax = 1499};
+                      e_doc =
+                       Some
+                        "\n\tThe standard Void type. Only [null] values can be of the type [Void].\n";
+                      e_meta = <fun>; e_private = false; e_extern = true;
+                      e_types = []; e_constrs = <abstr>; e_names = []},
+                    []))};
+             tf_expr =
+              {eexpr = TBlock [];
+               etype =
+                TEnum
+                 ({e_path = ([], "Void");
+                   e_pos =
+                    {Ast.pfile = "./std/StdTypes.hx"; Ast.pmin = 1486;
+                     Ast.pmax = 1499};
+                   e_doc =
+                    Some
+                     "\n\tThe standard Void type. Only [null] values can be of the type [Void].\n";
+                   e_meta = <fun>; e_private = false; e_extern = true;
+                   e_types = []; e_constrs = <abstr>; e_names = []},
+                 []);
+               epos = {Ast.pfile = "Test.hx"; Ast.pmin = 39; Ast.pmax = 41}}};
+          etype =
+           TFun ([],
+            TMono
+             {contents =
+               Some
+                (TEnum
+                  ({e_path = ([], "Void");
+                    e_pos =
+                     {Ast.pfile = "./std/StdTypes.hx"; Ast.pmin = 1486;
+                      Ast.pmax = 1499};
+                    e_doc =
+                     Some
+                      "\n\tThe standard Void type. Only [null] values can be of the type [Void].\n";
+                    e_meta = <fun>; e_private = false; e_extern = true;
+                    e_types = []; e_constrs = <abstr>; e_names = []},
+                  []))});
+          epos = {Ast.pfile = "Test.hx"; Ast.pmin = 22; Ast.pmax = 41}}};
+      {cf_name = "main"; cf_type = TLazy {contents = <fun>};
+       cf_public = false; cf_doc = None; cf_meta = <fun>;
+       cf_kind = Method MethNormal; cf_params = [];
+       cf_expr =
+        Some
+         {eexpr =
+           TFunction
+            {tf_args = [];
+             tf_type =
+              TMono
+               {contents =
+                 Some
+                  (TEnum
+                    ({e_path = ([], "Void");
+                      e_pos =
+                       {Ast.pfile = "./std/StdTypes.hx"; Ast.pmin = 1486;
+                        Ast.pmax = 1499};
+                      e_doc =
+                       Some
+                        "\n\tThe standard Void type. Only [null] values can be of the type [Void].\n";
+                      e_meta = <fun>; e_private = false; e_extern = true;
+                      e_types = []; e_constrs = <abstr>; e_names = []},
+                    []))};
+             tf_expr =
+              {eexpr =
+                TBlock
+                 [{eexpr =
+                    TCall
+                     ({eexpr =
+                        TField
+                         ({eexpr =
+                            TTypeExpr
+                             (TClassDecl
+                               {cl_path = ([], "Test");
+                                cl_pos =
+                                 {Ast.pfile = "Test.hx"; Ast.pmin = 0;
+                                  Ast.pmax = 81};
+                                cl_private = false; cl_doc = None;
+                                cl_meta = <fun>; cl_kind = KNormal;
+                                cl_extern = false; cl_interface = false;
+                                cl_types = []; cl_super = None;
+                                cl_implements = []; cl_fields = <abstr>;
+                                cl_statics = <abstr>;
+                                cl_ordered_statics = [$4; $5];
+                                cl_ordered_fields = []; cl_dynamic = None;
+                                cl_array_access = None;
+                                cl_constructor = None; cl_init = None;
+                                cl_overrides = []});
+                           etype =
+                            TType
+                             ({t_path = ([], "#Test");
+                               t_pos =
+                                {Ast.pfile = "Test.hx"; Ast.pmin = 0;
+                                 Ast.pmax = 81};
+                               t_doc = None; t_meta = <fun>;
+                               t_private = true; t_types = [];
+                               t_type =
+                                TAnon {a_fields = <abstr>; a_status = $6}},
+                             []);
+                           epos =
+                            {Ast.pfile = "Test.hx"; Ast.pmin = 68;
+                             Ast.pmax = 73}},
+                         "main2");
+                       etype = TLazy {contents = <fun>};
+                       epos =
+                        {Ast.pfile = "Test.hx"; Ast.pmin = 68; Ast.pmax = 73}},
+                     []);
+                   etype =
+                    TMono
+                     {contents =
+                       Some
+                        (TEnum
+                          ({e_path = ([], "Void");
+                            e_pos =
+                             {Ast.pfile = "./std/StdTypes.hx";
+                              Ast.pmin = 1486; Ast.pmax = 1499};
+                            e_doc =
+                             Some
+                              "\n\tThe standard Void type. Only [null] values can be of the type [Void].\n";
+                            e_meta = <fun>; e_private = false;
+                            e_extern = true; e_types = [];
+                            e_constrs = <abstr>; e_names = []},
+                          []))};
+                   epos =
+                    {Ast.pfile = "Test.hx"; Ast.pmin = 68; Ast.pmax = 75}}];
+               etype =
+                TMono
+                 {contents =
+                   Some
+                    (TEnum
+                      ({e_path = ([], "Void");
+                        e_pos =
+                         {Ast.pfile = "./std/StdTypes.hx"; Ast.pmin = 1486;
+                          Ast.pmax = 1499};
+                        e_doc = Some ...; e_meta = ...; e_private = ...;
+                         e_extern = ...; e_types = ...; e_constrs = ...;
+                         e_names = ...},
+                        ...))};
+                epos = ...}};
+           etype = ...; epos = ...}};
+       ...];
+     cl_ordered_fields = ...; cl_dynamic = ...; cl_array_access = ...;
+     cl_constructor = ...; cl_init = ...; cl_overrides = ...}
+
