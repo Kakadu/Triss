@@ -61,7 +61,8 @@ let do_exit() =
 		print_endline "Press enter to exit...";
 		ignore(read_line());
 	end;
-	exit 1
+	()
+	(* exit 1 *)
 
 let report msg p =
 	messages := format msg p :: !messages;
@@ -531,11 +532,9 @@ try
 		Typer.finalize ctx;
 		t();
                 print_endline "typing finished";
-(*		print_endline "Marshalling..";
-		let out_ch = open_out "data.tri" in
-		Marshal.to_channel out_ch ctx [Marshal.No_sharing];
-		close_out out_ch; *)
+
 		if !has_error then do_exit();
+
 		if !no_output then com.platform <- Cross;
 		let types, modules = Typer.generate ctx com.main_class (!excludes) in
 		com.types <- types;

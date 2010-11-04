@@ -8,6 +8,7 @@ TODO: understand defference between ExtLip.PMap and Core.Map. Both seems to be p
 
 NB about viewing Common.context in ocamldebug.
 You should resolve dependencies. Paste ot ocamldebug cconsole such code:
+	set arguments compile.hxml
 	load /usr/lib/ocaml/bigarray.cma              
 	load /usr/lib/ocaml/threads/threads.cma       
 	load /usr/local/lib/ocaml/3.11.2/bin_prot/bin_prot.cma
@@ -19,5 +20,5 @@ You should resolve dependencies. Paste ot ocamldebug cconsole such code:
 	load /usr/lib/ocaml/pcre/pcre.cma
 	load /usr/local/lib/ocaml/3.11.2/core_extended/core_extended.cma
 	load /usr/local/lib/ocaml/3.11.2/deriving/deriving.cma
-
+	load /home/kakadu/prog/Triss/ocaml/xml-light/xml-light.cma
 

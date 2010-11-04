@@ -1,5 +1,5 @@
 -swf9 test.swf
 -main Test
--D dump
+#-D dump
 -cp ./std
--xml test.out.xml
+#-xml test.out.xml

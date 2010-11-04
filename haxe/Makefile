@@ -25,8 +25,8 @@ OCAMLFLAGS=-g
 OCAMLOPTFLAGS=
 OUTFILE=triss.main
 
-HAXE_OBJS_BYTE=der_pmap.cmo ast.cmo lexer.cmo type.cmo common.cmo parser.cmo typecore.cmo genxml.cmo typeload.cmo codegen.cmo optimizer.cmo $(NEKO_SRC_PATH)nast.cmo $(NEKO_SRC_PATH)binast.cmo $(NEKO_SRC_PATH)nxml.cmo genneko.cmo genas3.cmo genjs.cmo genswf8.cmo genswf9.cmo genswf.cmo genphp.cmo gencpp.cmo interp.cmo typer.cmo 
-HAXE_TARGETS_BYTE=der_pmap.cmo ast.cmi ast.cmo lexer.cmo type.cmo common.cmi common.cmo parser.cmo typecore.cmo genxml.cmo typeload.cmo codegen.cmo optimizer.cmo $(NEKO_SRC_PATH)nast.cmo $(NEKO_SRC_PATH)binast.cmo $(NEKO_SRC_PATH)nxml.cmo genneko.cmo genas3.cmo genjs.cmo genswf8.cmo genswf9.cmo genswf.cmo genphp.cmo gencpp.cmo interp.cmo typer.cmo 
+HAXE_OBJS_BYTE=der_pmap.cmo ast.cmo lexer.cmo type.cmo type_comap.cmo common.cmo parser.cmo typecore.cmo genxml.cmo typeload.cmo codegen.cmo optimizer.cmo $(NEKO_SRC_PATH)nast.cmo $(NEKO_SRC_PATH)binast.cmo $(NEKO_SRC_PATH)nxml.cmo genneko.cmo genas3.cmo genjs.cmo genswf8.cmo genswf9.cmo genswf.cmo genphp.cmo gencpp.cmo interp.cmo typer.cmo 
+HAXE_TARGETS_BYTE=der_pmap.cmo ast.cmi ast.cmo lexer.cmo type.cmo type_comap.cmo common.cmi common.cmo parser.cmo typecore.cmo genxml.cmo typeload.cmo codegen.cmo optimizer.cmo $(NEKO_SRC_PATH)nast.cmo $(NEKO_SRC_PATH)binast.cmo $(NEKO_SRC_PATH)nxml.cmo genneko.cmo genas3.cmo genjs.cmo genswf8.cmo genswf9.cmo genswf.cmo genphp.cmo gencpp.cmo interp.cmo typer.cmo 
 TRISS_OBJS_BYTE=triss_int.cmo triss_main.cmo
 TRISS_TARGETS= triss_int.cmo triss_main.cmo 
 PROG1_OBJS=$(HAXE_OBJS_BYTE) $(TRISS_OBJS_BYTE)
